@@ -1,9 +1,6 @@
 # pandas
 ```
-771,"Mountain-100 Silver, 38",Mountain Bikes,3399.9900
-772,"Mountain-100 Silver, 42",Mountain Bikes,3399.9900
-773,"Mountain-100 Silver, 44",Mountain Bikes,3399.9900
-774,"Road-750 Black, 52",Road Bikes,539.9900
+git clone https://github.com/sfrechette/adventureworks-neo4j
 ```
 ```
 from pyspark.sql.types import *
@@ -20,7 +17,7 @@ productSchema = StructType([
     StructField("ListPrice", FloatType())
     ])
 
-df = spark.read.load('product-data.csv',format='csv',schema=productSchema,header=False)
+df = spark.read.load('product.csv',format='csv',schema=productSchema,header=False)
 df.show()
 ```
 ```
