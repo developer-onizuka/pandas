@@ -62,10 +62,13 @@ df.createOrReplaceTempView("products")
 from matplotlib import pyplot as plt
 
 # Get the data as a Pandas dataframe
-data = spark.sql("SELECT ModelName, COUNT(ProductID) AS ProductCount \
-                  FROM products \
+temp = spark.sql("SELECT ModelName, COUNT(ProductID) AS ProductCount FROM products \
                   GROUP BY ModelName \
-                  ORDER BY ModelName").toPandas()
+                  ORDER BY ModelName")
+
+temp.createOrReplaceTempView("productcount")
+data = spark.sql("SELECT ModelName, ProductCount FROM productcount \
+                  WHERE ProductCount > 1").toPandas()
 ```
 ```
 # Clear the plot area
