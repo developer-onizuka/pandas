@@ -1,7 +1,8 @@
 # pandas
 ```
-git clone https://github.com/sfrechette/adventureworks-neo4j
+$ git clone https://github.com/sfrechette/adventureworks-neo4j
 ```
+The followings are for Jupyther notebook.
 ```
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
