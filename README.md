@@ -90,3 +90,4 @@ plt.xticks(rotation=70)
 # Show the plot area
 plt.show()
 ```
+![pandas.png](https://github.com/developer-onizuka/pandas/blob/main/pandas.png)
