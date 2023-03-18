@@ -91,7 +91,7 @@ plt.xticks(rotation=70)
 # Show the plot area
 plt.show()
 ```
-The Matplotlib library requires data to be in a Pandas dataframe rather than a Spark dataframe, so the toPandas method is used to convert it. The code then creates a figure with a specified size and plots a bar chart with some custom property configuration before showing the resulting plot.
+The Matplotlib library requires data to be in a Pandas dataframe rather than a Spark dataframe, so the **toPandas method** is used to convert it. The code then creates a figure with a specified size and plots a bar chart with some custom property configuration before showing the resulting plot.
 
 The chart produced by the code would look similar to the following image:<br>
 ![pandas.png](https://github.com/developer-onizuka/pandas/blob/main/pandas.png)
