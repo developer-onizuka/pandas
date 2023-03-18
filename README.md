@@ -82,7 +82,7 @@ fig = plt.figure(figsize=(12,8))
 plt.bar(x=data['ModelName'], height=data['ProductCount'], color='orange')
 
 # Customize the chart
-plt.title('Product Counts by ModelName')
+plt.title('Product Counts by ModelName grater than one')
 plt.xlabel('ModelName')
 plt.ylabel('Products')
 plt.grid(color='#95a5a6', linestyle='--', linewidth=2, axis='y', alpha=0.7)
