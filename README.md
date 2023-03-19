@@ -95,3 +95,37 @@ The Matplotlib library requires data to be in a Pandas dataframe rather than a S
 
 The chart produced by the code would look similar to the following image:<br>
 ![pandas.png](https://github.com/developer-onizuka/pandas/blob/main/pandas.png)
+
+
+# Scala
+```
+import org.apache.spark.sql.types._
+import org.apache.spark.sql.functions._
+
+val productSchema = StructType(Array(
+    StructField("ProductID", IntegerType),
+    StructField("ProductNumber", StringType),
+    StructField("ProductName", StringType),
+    StructField("ModelName", StringType),
+    StructField("MakeFlag", IntegerType),
+    StructField("StandardCost", StringType),
+    StructField("ListPrice", FloatType),
+    StructField("SubCategoryID", IntegerType)))
+
+val df = spark.read.format("csv").option("header","true").schema(productSchema).load("products.csv")
+df.printSchema()
+df.show()
+```
+```
+%%python
+from matplotlib import pyplot as plt
+
+# Get the data as a Pandas dataframe
+temp = spark.sql("SELECT ModelName, COUNT(ProductID) AS ProductCount FROM products \
+                  GROUP BY ModelName \
+                  ORDER BY ModelName")
+
+temp.createOrReplaceTempView("productcount")
+data = spark.sql("SELECT ModelName, ProductCount FROM productcount \
+                  WHERE ProductCount > 1").toPandas()
+```
