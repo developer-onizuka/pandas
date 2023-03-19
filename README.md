@@ -138,14 +138,17 @@ data = spark.sql("SELECT ModelName, ProductCount FROM productcount \
                   WHERE ProductCount > 1").toPandas()
 ```
 ```
-%matplotlib notebook
 %%python
 
 # Clear the plot area
-# plt.clf()
+plt.clf()
 
 # Create a Figure
 fig = plt.figure(figsize=(12,8))
+```
+```
+%matplotlib notebook
+%%python
 
 # Create a bar plot of product counts by ModelName
 plt.bar(x=data['ModelName'], height=data['ProductCount'], color='orange')
