@@ -61,6 +61,9 @@ The lifetime of this temporary table is tied to the SparkSession that was used t
 ```
 df.createOrReplaceTempView("products")
 ```
+# DataFrame.toPandas
+Returns the contents of this DataFrame as Pandas pandas.DataFrame.<br>
+This is only available if Pandas is installed and available.
 ```
 from matplotlib import pyplot as plt
 
