@@ -55,6 +55,9 @@ df.show()
 +---------+-------------+--------------------+--------------------+--------+------------+---------+-------------+
 only showing top 20 rows
 ```
+# DataFrame.createOrReplaceTempView
+Creates or replaces a local temporary view with this DataFrame.<br>
+The lifetime of this temporary table is tied to the SparkSession that was used to create this DataFrame.
 ```
 df.createOrReplaceTempView("products")
 ```
