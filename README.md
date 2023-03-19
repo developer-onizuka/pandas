@@ -118,7 +118,7 @@ val productSchema = StructType(Array(
     StructField("SubCategoryID", IntegerType)))
 
 val df = spark.read.format("csv").option("header","true").schema(productSchema).load("products.csv")
-df.withColumn("ListPrice", col("ListPrice")+10)
+df.withColumn("ListPrice", df("ListPrice")+10)
 df.printSchema()
 df.show()
 ```
