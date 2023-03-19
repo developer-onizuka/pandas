@@ -122,6 +122,8 @@ df.withColumn("ListPrice", col("ListPrice")+10)
 df.printSchema()
 df.show()
 ```
+# %%python script magic
+Run cells with python in a subprocess.
 ```
 %%python
 from matplotlib import pyplot as plt
