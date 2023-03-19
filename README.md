@@ -2,7 +2,7 @@
 ```
 $ git clone https://github.com/sfrechette/adventureworks-neo4j
 ```
-#1. Python for Jupyther notebook associated with Spark
+# 1. Python for Jupyther notebook associated with Spark
 ```
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
@@ -98,7 +98,7 @@ The chart produced by the code would look similar to the following image:<br>
 ![pandas.png](https://github.com/developer-onizuka/pandas/blob/main/pandas.png)
 
 
-#2. Scala for Jupyther notebook associated with Spark
+# 2. Scala for Jupyther notebook associated with Spark
 ```
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
