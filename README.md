@@ -1,7 +1,5 @@
 # pandas
-```
-$ git clone https://github.com/sfrechette/adventureworks-neo4j
-```
+
 # 1. Python for Jupyther notebook associated with Spark
 ```
 from pyspark.sql.types import *
