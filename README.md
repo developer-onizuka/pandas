@@ -1,6 +1,11 @@
 # pandas
 pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language. Pandas runs operations on a single machine, while PySpark runs on multiple machines. If you are working on machine learning applications that work with larger datasets, PySpark is a great choice as it can perform operations much faster (100x faster) than Pandas.
 
+You can run jupter notebook with pySpark as follow:
+```
+sudo docker run -it -v /mnt/c/Temp:/mnt --rm -p 8888:8888 --name spark jupyter/all-spark-notebook:spark-3.2.0
+```
+
 # 1. Python for Jupyther notebook associated with Spark
 Please note the .withColumn method is used to add new columns to the DataFrame in the Spark operation below. Or use it to replace an existing column with a new value.
 ```
