@@ -1,5 +1,3 @@
-https://youtu.be/T9glqfNiq1M
-
 # pandas
 pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language. Pandas runs operations on a single machine, while PySpark runs on multiple machines. If you are working on machine learning applications that work with larger datasets, PySpark is a great choice as it can perform operations much faster (100x faster) than Pandas.
 
